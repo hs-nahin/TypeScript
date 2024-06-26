@@ -4,7 +4,7 @@ Welcome to the TypeScript Roadmap! This roadmap is designed to guide you through
 
 ## Topics
 
-1. [Introduction](./01-introduction/)
+1. [Introduction](https://github.com/hasnat-shahriyar/TypeScript/tree/main/Introduction)
 2. [Basic Types](./02-basic-types/)
 3. [Interfaces](./03-interfaces/)
 4. [Classes](./04-classes/)
