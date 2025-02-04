@@ -4,26 +4,30 @@ a.push("Mim");
 a.push(1);
 console.log(a);
 
-// Couple class
+// Couple class with access modifier
 class Couple {
-  name: string;
-  age: number;
-  city: string;
+  //   private name: string;
+  //   private age: number;
+  //   private city: string;
 
-  constructor(n: string, a: number, c: string) {
-    this.name = n;
-    this.age = a;
-    this.city = c;
-  }
-  play() {
+  //   constructor(n: string, a: number, c: string) {
+  //     this.name = n;
+  //     this.age = a;
+  //     this.city = c;
+  //   }
+  constructor(
+    private name: string,
+    private age: number,
+    readonly city: string
+  ) {}
+  wed() {
     console.log(`${this.name} is playing`);
   }
 }
 
+// Object of class
 const groom = new Couple("Nahin", 25, "Dhaka");
 const bride = new Couple("Mim", 21, "Dinajpur");
-
-console.log(groom.name);
 
 // Array of class
 const couple: Couple[] = [];
