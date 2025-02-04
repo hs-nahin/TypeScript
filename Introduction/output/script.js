@@ -57,3 +57,7 @@ const response1 = {
     },
 };
 console.log(response1); // Output: { name: 'Mim', age: 21 }
+// Tuples
+let arr = ["Nahin", 25, { objBool: true }]; // An array of mixed types
+arr.push("Mim", 21, { objBool: false }); // Pushing values to the array
+console.log(arr); // Output: [ 'Nahin', 25, { objBool: true }, 'Mim', 21, { objBool: false } ]
