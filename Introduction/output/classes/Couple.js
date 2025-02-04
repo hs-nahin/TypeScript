@@ -12,6 +12,12 @@ export class Couple {
         this.age = age;
         this.city = city;
     }
+    getProperty() {
+        return this.city;
+    }
+    getAge() {
+        return this.age;
+    }
     wed() {
         console.log(`${this.name} is playing`);
     }
