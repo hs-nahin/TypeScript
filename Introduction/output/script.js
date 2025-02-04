@@ -37,13 +37,23 @@ let user = addID({
 });
 // Log the 'city' property of the user object
 console.log(user.city); // Output: Dinajpur
+// Generics with Interfaces
+// Define an enum RType with four possible values
+var RType;
+(function (RType) {
+    RType[RType["SUCCESS"] = 0] = "SUCCESS";
+    RType[RType["FAILURE"] = 1] = "FAILURE";
+    RType[RType["UNAUTHINTICATED"] = 2] = "UNAUTHINTICATED";
+    RType[RType["FORBIDDEN"] = 3] = "FORBIDDEN";
+})(RType || (RType = {})); // Enum for response types (e.g., success, failure, unauthenticated, forbidden)
 // Create an instance of APIResponse with T as object
 const response1 = {
     status: 200, // HTTP status code indicating success
-    type: "good", // Type of response
+    type: RType.SUCCESS, // Response type indicating success
     data: {
         // Data of type object
         name: "Mim", // Name property
         age: 21, // Age property
     },
 };
+console.log(response1); // Output: { name: 'Mim', age: 21 }

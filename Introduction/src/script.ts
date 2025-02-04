@@ -56,20 +56,29 @@ let user = addID({
 console.log(user.city); // Output: Dinajpur
 
 // Generics with Interfaces
+// Define an enum RType with four possible values
+enum RType {
+  SUCCESS,
+  FAILURE,
+  UNAUTHINTICATED,
+  FORBIDDEN,
+} // Enum for response types (e.g., success, failure, unauthenticated, forbidden)
+
 // Define a generic interface APIResponse with a type parameter T
 interface APIResponse<T> {
   status: number; // HTTP status code
-  type: string; // Type of response (e.g., "good", "error")
+  type: RType; // Response type (e.g., success, failure, unauthenticated, forbidden)
   data: T; // Data of type T, which makes this interface flexible
 }
 
 // Create an instance of APIResponse with T as object
 const response1: APIResponse<object> = {
   status: 200, // HTTP status code indicating success
-  type: "good", // Type of response
+  type: RType.SUCCESS, // Response type indicating success
   data: {
     // Data of type object
     name: "Mim", // Name property
     age: 21, // Age property
   },
 };
+console.log(response1); // Output: { name: 'Mim', age: 21 }
